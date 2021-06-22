@@ -8,9 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        NavigationView {
+            
+//    Your Master Detail View...
+            Text("Home")
+//            Navigation Bar properties
+                .navigationTitle("Title")
+//            Navigation Bar Size
+            
+                .navigationBarTitleDisplayMode(.large)
+//            NavigationBar Items...
+                .toolbar(content: {
+                    ToolbarItem(placement:.navigationBarTrailing){
+//                        Your View...
+                        Button(action: {}, label: {
+                            Text("Click Me")
+                        })
+                    }
+                })
+        }
     }
 }
 
